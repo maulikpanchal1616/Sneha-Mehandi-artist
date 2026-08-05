@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snehal Mehndi &ndash; Timeless Mehndi Masterpieces</title>
+  <meta name="description" content="Snehal Mehndi Art &ndash; Creating timeless mehndi masterpieces with elegance. Book bridal, arabic, and traditional henna." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+     <div class="header-inner">
+       <a class="logo" href="#" onclick="showPage('home')">Snehal Mehndi</a>
+       <nav class="main-nav">
+         <a href="#" class="nav-link" onclick="showPage('portfolio')" id="nav-portfolio">Portfolio</a>
+         <a href="#" class="nav-link" onclick="showPage('services')" id="nav-services">Services</a>
+         <a href="#" class="nav-link" onclick="scrollToSection('.collection-section')" id="nav-philosophy">Philosophy</a>
+         <a href="#" class="nav-link" onclick="scrollToSection('.testimonial-section')" id="nav-artistry">Artistry</a>
+         <a href="#" class="nav-link" onclick="scrollToSection('#footer-home')" id="nav-contact">Contact</a>
+       </nav>
+       <button class="btn-book-now" onclick="showPage('booking')">BOOK NOW</button>
+       <button class="hamburger" id="hamburger" aria-label="Menu">
+         <span></span><span></span><span></span>
+       </button>
+     </div>
+     <div class="mobile-nav" id="mobile-nav">
+       <a href="#" onclick="showPage('portfolio');closeMobileNav()">Portfolio</a>
+       <a href="#" onclick="showPage('services');closeMobileNav()">Services</a>
+       <a href="#" onclick="scrollToSection('.collection-section');closeMobileNav()">Philosophy</a>
+       <a href="#" onclick="scrollToSection('.testimonial-section');closeMobileNav()">Artistry</a>
+       <a href="#" onclick="scrollToSection('#footer-home');closeMobileNav()">Contact</a>
+       <a href="#" class="mobile-book" onclick="showPage('booking');closeMobileNav()">BOOK NOW</a>
+     </div>
+   </header>
+
+  <!-- ======================== HOME PAGE ======================== -->
+  <main id="page-home" class="page active">
+
+    <!-- Hero -->
+    <section class="hero-section">
+      <div class="hero-bg-blur"></div>
+      
+      <!-- Premium Background Art (Blob & Mandala) -->
+      <div class="hero-bg-art">
+        <svg class="hero-blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path fill="var(--cream-dark)" d="M44.7,-72.6C57.2,-64.1,66.1,-50.7,72.4,-36.3C78.7,-21.8,82.4,-6.2,80.1,8.7C77.8,23.6,69.5,37.8,59.3,49.8C49.1,61.8,37.1,71.6,22.9,76.5C8.8,81.3,-7.4,81.1,-22.8,76.5C-38.2,71.9,-52.7,62.8,-63.9,50.5C-75.1,38.1,-82.9,22.4,-84.9,5.8C-86.9,-10.8,-83.1,-28.4,-74,-42.6C-64.9,-56.9,-50.5,-67.8,-35.6,-74.9C-20.7,-82,-5.3,-85.4,9.6,-86.9C24.4,-88.4,32.2,-81.1,44.7,-72.6Z" transform="translate(100 100)" />
+        </svg>
+        <svg class="hero-mandala" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="250" cy="250" r="240" stroke="var(--gold)" stroke-width="0.75" stroke-dasharray="4 8" opacity="0.2"/>
+          <circle cx="250" cy="250" r="210" stroke="var(--gold)" stroke-width="1.25" opacity="0.3"/>
+          <circle cx="250" cy="250" r="180" stroke="var(--gold)" stroke-width="0.75" stroke-dasharray="2 4" opacity="0.25"/>
+          <circle cx="250" cy="250" r="150" stroke="var(--gold)" stroke-width="1" opacity="0.3"/>
+          <circle cx="250" cy="250" r="120" stroke="var(--gold)" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.35"/>
+          <circle cx="250" cy="250" r="90" stroke="var(--gold)" stroke-width="1.25" opacity="0.4"/>
+          <circle cx="250" cy="250" r="60" stroke="var(--gold)" stroke-width="1.75" stroke-dasharray="2 2" opacity="0.45"/>
+          <circle cx="250" cy="250" r="30" stroke="var(--gold)" stroke-width="2" opacity="0.5"/>
+          <circle cx="250" cy="250" r="10" fill="var(--gold)" opacity="0.6"/>
+          <g stroke="var(--gold)" stroke-width="0.75" opacity="0.25">
+            <line x1="250" y1="10" x2="250" y2="490" />
+            <line x1="10" y1="250" x2="490" y2="250" />
+            <line x1="80" y1="80" x2="420" y2="420" />
+            <line x1="80" y1="420" x2="420" y2="80" />
+            <path d="M250 50 L380 250 L250 450 L120 250 Z" />
+            <path d="M250 80 L350 250 L250 420 L150 250 Z" />
+            <path d="M250 110 L320 250 L250 390 L180 250 Z" />
+          </g>
+        </svg>
+      </div>
+
+      <div class="floating-leaf fl1">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 2 2 4a7 7 0 0 1-10 14z"></path><path d="M19 2c-2.26 4.33-5.27 7.14-8 10"></path></svg>
+      </div>
+      <div class="floating-leaf fl2">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 2 2 4a7 7 0 0 1-10 14z"></path><path d="M19 2c-2.26 4.33-5.27 7.14-8 10"></path></svg>
+      </div>
+      <div class="floating-leaf fl3">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 2 2 4a7 7 0 0 1-10 14z"></path><path d="M19 2c-2.26 4.33-5.27 7.14-8 10"></path></svg>
+      </div>
+      <div class="hero-inner">
+        <div class="hero-left">
+          <span class="hero-eyebrow">ETHEREAL ARTISTRY</span>
+          <h1 class="hero-title">
+            Creating Timeless<br />
+            <em>Mehndi Masterpieces</em><br />
+            with Elegance
+          </h1>
+          <p class="hero-desc">A fusion of ancient heritage and contemporary luxury. We curate bespoke henna designs that tell your unique story, crafted with 100% organic, artisan-grade ingredients.</p>
+          <div class="hero-actions">
+            <button class="btn-primary" onclick="showPage('booking')">Book Appointment</button>
+            <button class="btn-outline" onclick="showPage('portfolio')">View Gallery</button>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="stat-cards">
+            <div class="stat-row">
+              <div class="stat-card card-heritage">
+                <span class="stat-num">100%</span>
+                <span class="stat-label">Organic Henna</span>
+              </div>
+              <div class="stat-card card-brides">
+                <span class="stat-num">1k+</span>
+                <span class="stat-label">Happy Brides</span>
+              </div>
+            </div>
+            <div class="stat-card stat-award card-award">
+              <span class="award-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </span>
+              <div>
+                <span class="stat-num">5+ Years of Experience</span>
+                <span class="stat-label">Mastering the Art of Bridal & Traditional Mehndi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Collection -->
+    <section class="collection-section">
+      <div class="section-label gold-label reveal">THE COLLECTION</div>
+      <h2 class="section-title reveal"><em>Featured Art Styles</em></h2>
+      <div class="title-divider reveal"></div>
+      <div class="cards-grid">
+        <div class="art-card reveal">
+          <div class="art-card-img-wrap">
+            <img src="images/mehndi_traditional.png" alt="Traditional Bridal" />
+          </div>
+          <div class="art-card-overlay-content">
+            <h3>Traditional Bridal</h3>
+            <p>Rich, intricate full-hand patterns rooted in centuries of tradition. Every line tells a timeless story.</p>
+            <a href="#" class="art-card-link" onclick="showPage('portfolio'); event.preventDefault();">Discover More &rarr;</a>
+          </div>
+        </div>
+        <div class="art-card reveal">
+          <div class="art-card-img-wrap">
+            <img src="images/mehndi_floral.png" alt="Arabic Flow" />
+          </div>
+          <div class="art-card-overlay-content">
+            <h3>Arabic Flow</h3>
+            <p>Bold strokes and rhythmic floral trails emphasizing elegance and space.</p>
+            <a href="#" class="art-card-link" onclick="showPage('portfolio'); event.preventDefault();">Discover More &rarr;</a>
+          </div>
+        </div>
+        <div class="art-card reveal">
+          <div class="art-card-img-wrap">
+            <img src="images/mehndi_geometric.png" alt="Geometric Minimal" />
+          </div>
+          <div class="art-card-overlay-content">
+            <h3>Geometric Minimal</h3>
+            <p>Contemporary lines, dainty dots and subtle accents for the modern editorial aesthetic.</p>
+            <a href="#" class="art-card-link" onclick="showPage('portfolio'); event.preventDefault();">Discover More &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <!-- Testimonial -->
+    <section class="testimonial-section">
+      <div class="testimonial-inner">
+        <div class="testimonial-left reveal">
+          <div class="section-label gold-label">THE EXPERIENCE</div>
+          <h2 class="section-title">Hear from our<br />Exquisite Brides</h2>
+          
+          <div class="testimonial-text-slider">
+            <!-- Slide 1 -->
+            <div class="testimonial-text-slide active">
+              <div class="quote-wrapper">
+                <div class="quote-deco" aria-hidden="true">
+                  <svg viewBox="0 0 110 90" fill="currentColor">
+                    <path d="M33,22.7 C23,22.7 15,31 15,44.7 C15,59.3 26.3,69 36,69 C44.7,69 51.3,62.3 51.3,53.7 C51.3,45 44.7,38.3 36,38.3 C34.3,38.3 32.7,38.7 31.3,39.3 C32.7,29.7 39,23 47.7,20.7 L41,13 C38,15.7 35,19 33,22.7 Z M78,22.7 C68,22.7 60,31 60,44.7 C60,59.3 71.3,69 81,69 C89.7,69 96.3,62.3 96.3,53.7 C96.3,45 89.7,38.3 81,38.3 C79.3,38.3 77.7,38.7 76.3,39.3 C77.7,29.7 84,23 92.7,20.7 L86,13 C83,15.7 80,19 78,22.7 Z"/>
+                  </svg>
+                </div>
+                <blockquote class="quote-text">"Snehal's art is more than just mehndi; it's an experience of luxury and calm. The intricate detail she achieved for my wedding was breathtaking. I felt like a masterpiece myself. Truly the best in the industry."</blockquote>
+              </div>
+              <div class="quote-author-card">
+                <div class="quote-avatar">
+                  <img src="images/mehndi_testimonial.png" alt="Ananya Sharma" />
+                </div>
+                <div class="quote-author-info">
+                  <span class="quote-author-name">Ananya Sharma</span>
+                  <span class="quote-author-role">Bridal Client, December 2023</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="testimonial-text-slide">
+              <div class="quote-wrapper">
+                <div class="quote-deco" aria-hidden="true">
+                  <svg viewBox="0 0 110 90" fill="currentColor">
+                    <path d="M33,22.7 C23,22.7 15,31 15,44.7 C15,59.3 26.3,69 36,69 C44.7,69 51.3,62.3 51.3,53.7 C51.3,45 44.7,38.3 36,38.3 C34.3,38.3 32.7,38.7 31.3,39.3 C32.7,29.7 39,23 47.7,20.7 L41,13 C38,15.7 35,19 33,22.7 Z M78,22.7 C68,22.7 60,31 60,44.7 C60,59.3 71.3,69 81,69 C89.7,69 96.3,62.3 96.3,53.7 C96.3,45 89.7,38.3 81,38.3 C79.3,38.3 77.7,38.7 76.3,39.3 C77.7,29.7 84,23 92.7,20.7 L86,13 C83,15.7 80,19 78,22.7 Z"/>
+                  </svg>
+                </div>
+                <blockquote class="quote-text">"Absolutely stunning Arabic trails! The precision of the lines and the deep rich stain left all my guests asking for her contact details. She brings absolute professionalism to the table."</blockquote>
+              </div>
+              <div class="quote-author-card">
+                <div class="quote-avatar">
+                  <img src="images/mehndi_traditional.png" alt="Priya Patel" />
+                </div>
+                <div class="quote-author-info">
+                  <span class="quote-author-name">Priya Patel</span>
+                  <span class="quote-author-role">Festive Guest, October 2023</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="testimonial-text-slide">
+              <div class="quote-wrapper">
+                <div class="quote-deco" aria-hidden="true">
+                  <svg viewBox="0 0 110 90" fill="currentColor">
+                    <path d="M33,22.7 C23,22.7 15,31 15,44.7 C15,59.3 26.3,69 36,69 C44.7,69 51.3,62.3 51.3,53.7 C51.3,45 44.7,38.3 36,38.3 C34.3,38.3 32.7,38.7 31.3,39.3 C32.7,29.7 39,23 47.7,20.7 L41,13 C38,15.7 35,19 33,22.7 Z M78,22.7 C68,22.7 60,31 60,44.7 C60,59.3 71.3,69 81,69 C89.7,69 96.3,62.3 96.3,53.7 C96.3,45 89.7,38.3 81,38.3 C79.3,38.3 77.7,38.7 76.3,39.3 C77.7,29.7 84,23 92.7,20.7 L86,13 C83,15.7 80,19 78,22.7 Z"/>
+                  </svg>
+                </div>
+                <blockquote class="quote-text">"Snehal customized a beautiful geometric contemporary layout that perfectly complemented my modern wedding gown. Her attention to detail and creative styling are unmatched."</blockquote>
+              </div>
+              <div class="quote-author-card">
+                <div class="quote-avatar">
+                  <img src="images/mehndi_geometric.png" alt="Meera Shah" />
+                </div>
+                <div class="quote-author-info">
+                  <span class="quote-author-name">Meera Shah</span>
+                  <span class="quote-author-role">Contemporary Bride, January 2024</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Slide 4 -->
+            <div class="testimonial-text-slide">
+              <div class="quote-wrapper">
+                <div class="quote-deco" aria-hidden="true">
+                  <svg viewBox="0 0 110 90" fill="currentColor">
+                    <path d="M33,22.7 C23,22.7 15,31 15,44.7 C15,59.3 26.3,69 36,69 C44.7,69 51.3,62.3 51.3,53.7 C51.3,45 44.7,38.3 36,38.3 C34.3,38.3 32.7,38.7 31.3,39.3 C32.7,29.7 39,23 47.7,20.7 L41,13 C38,15.7 35,19 33,22.7 Z M78,22.7 C68,22.7 60,31 60,44.7 C60,59.3 71.3,69 81,69 C89.7,69 96.3,62.3 96.3,53.7 C96.3,45 89.7,38.3 81,38.3 C79.3,38.3 77.7,38.7 76.3,39.3 C77.7,29.7 84,23 92.7,20.7 L86,13 C83,15.7 80,19 78,22.7 Z"/>
+                  </svg>
+                </div>
+                <blockquote class="quote-text">"The engagement mehndi she did was absolutely flawless. The floral motifs were delicate and the density of the pattern was exactly what I wanted. A truly premium experience!"</blockquote>
+              </div>
+              <div class="quote-author-card">
+                <div class="quote-avatar">
+                  <img src="images/mehndi_engagement.png" alt="Riya Kapoor" />
+                </div>
+                <div class="quote-author-info">
+                  <span class="quote-author-name">Riya Kapoor</span>
+                  <span class="quote-author-role">Engagement Bride, November 2023</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Static Navigation Controls -->
+          <div class="testimonial-controls">
+            <button class="slider-arrow prev-btn" aria-label="Previous testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <div class="slider-indicator">
+              <span class="current-slide-num">01</span>
+              <span class="slider-divider">/</span>
+              <span class="total-slides-num">04</span>
+            </div>
+            <button class="slider-arrow next-btn" aria-label="Next testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </div>
+        
+        <div class="testimonial-right reveal">
+          <div class="testimonial-image-slider">
+            <div class="testimonial-img-wrap active">
+              <img src="images/mehndi_testimonial.png" alt="Ananya Sharma Testimonial" />
+            </div>
+            <div class="testimonial-img-wrap">
+              <img src="images/mehndi_traditional.png" alt="Priya Patel Testimonial" />
+            </div>
+            <div class="testimonial-img-wrap">
+              <img src="images/mehndi_geometric.png" alt="Meera Shah Testimonial" />
+            </div>
+            <div class="testimonial-img-wrap">
+              <img src="images/mehndi_engagement.png" alt="Riya Kapoor Testimonial" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Canvas -->
+    <section class="social-section">
+      <div class="social-header reveal">
+        <div class="section-label gold-label">INSTAGRAM</div>
+        <h2 class="social-heading">Follow the Journey</h2>
+        <a href="https://instagram.com/snehal_mehndi_art" target="_blank" class="insta-handle">@snehal_mehndi_art</a>
+      </div>
+      <div class="social-filmstrip">
+        <a href="#" class="social-item reveal">
+          <img src="images/mehndi_social1.png" alt="Mehndi art" />
+          <div class="social-overlay">
+            <svg class="heart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+        </a>
+        <a href="#" class="social-item reveal">
+          <img src="images/mehndi_social2.png" alt="Mehndi art" />
+          <div class="social-overlay">
+            <svg class="heart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+        </a>
+        <a href="#" class="social-item reveal">
+          <img src="images/mehndi_traditional.png" alt="Mehndi art" />
+          <div class="social-overlay">
+            <svg class="heart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+        </a>
+        <a href="#" class="social-item reveal">
+          <img src="images/mehndi_arabic.png" alt="Mehndi art" />
+          <div class="social-overlay">
+            <svg class="heart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+        </a>
+        <a href="#" class="social-item reveal">
+          <img src="images/mehndi_geometric.png" alt="Mehndi art" />
+          <div class="social-overlay">
+            <svg class="heart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+        </a>
+        <a href="#" class="social-item reveal">
+          <img src="images/mehndi_testimonial.png" alt="Mehndi art" />
+          <div class="social-overlay">
+            <svg class="heart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+        </a>
+      </div>
+
+    <!-- Scrolling Photo Strip -->
+    <section class="photo-strip">
+      <div class="strip-track">
+        <div class="strip-img"><img src="images/mehndi_hero.png" alt="mehndi"/></div>
+        <div class="strip-img"><img src="images/mehndi_traditional.png" alt="mehndi"/></div>
+        <div class="strip-img"><img src="images/mehndi_arabic.png" alt="mehndi"/></div>
+        <div class="strip-img"><img src="images/mehndi_floral.png" alt="mehndi"/></div>
+        <div class="strip-img"><img src="images/mehndi_geometric.png" alt="mehndi"/></div>
+        <div class="strip-img"><img src="images/mehndi_testimonial.png" alt="mehndi"/></div>
+        <div class="strip-img"><img src="images/mehndi_engagement.png" alt="mehndi"/></div>
+        <div class="strip-img"><img src="images/mehndi_festival.png" alt="mehndi"/></div>
+        <div class="strip-img"><img src="images/mehndi_modern.png" alt="mehndi"/></div>
+        <div class="strip-img"><img src="images/mehndi_social1.png" alt="mehndi"/></div>
+        <div class="strip-img"><img src="images/mehndi_social2.png" alt="mehndi"/></div>
+        <div class="strip-img"><img src="images/mehndi_social3.png" alt="mehndi"/></div>
+        <div class="strip-img"><img src="images/mehndi_hero.png" alt="mehndi"/></div>
+        <div class="strip-img"><img src="images/mehndi_traditional.png" alt="mehndi"/></div>
+        <div class="strip-img"><img src="images/mehndi_arabic.png" alt="mehndi"/></div>
+        <div class="strip-img"><img src="images/mehndi_floral.png" alt="mehndi"/></div>
+        <div class="strip-img"><img src="images/mehndi_geometric.png" alt="mehndi"/></div>
+        <div class="strip-img"><img src="images/mehndi_testimonial.png" alt="mehndi"/></div>
+        <div class="strip-img"><img src="images/mehndi_engagement.png" alt="mehndi"/></div>
+        <div class="strip-img"><img src="images/mehndi_festival.png" alt="mehndi"/></div>
+        <div class="strip-img"><img src="images/mehndi_modern.png" alt="mehndi"/></div>
+        <div class="strip-img"><img src="images/mehndi_social1.png" alt="mehndi"/></div>
+        <div class="strip-img"><img src="images/mehndi_social2.png" alt="mehndi"/></div>
+        <div class="strip-img"><img src="images/mehndi_social3.png" alt="mehndi"/></div>
+      </div>
+    </section>
+    </section>
+
+    <!-- Footer Home -->
+    <footer class="site-footer" id="footer-home">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">Snehal<br />Mehndi</div>
+          <p>Redefining traditional artistry for the modern connoisseur. Hand-crafted, heart-felt.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="#">The Collection</a>
+          <a href="#">Bridal Experience</a>
+          <a href="#">Organic Henna</a>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <a href="#">Sustainability</a>
+          <a href="#">Privacy</a>
+          <a href="#">Press</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <div class="footer-icons">
+            <button class="icon-btn" aria-label="Share">&#8679;</button>
+            <button class="icon-btn" aria-label="Email">&#9993;</button>
+          </div>
+          <a href="mailto:snehalvp2007@gmail.com" class="footer-email">snehalvp2007@gmail.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Snehal Mehndi Art. Crafted for Timeless Elegance.</p>
+        <p class="footer-locations">Ahmedabad</p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- ======================== PORTFOLIO PAGE ======================== -->
+  <main id="page-portfolio" class="page">
+    <section class="gallery-hero">
+      <div class="gallery-hero-inner">
+        <span class="gold-label italic-label">The Collection</span>
+        <h1 class="gallery-title reveal">Timeless Artistry Captured<br />in Every Detail</h1>
+        <div class="divider-line"></div>
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all">ALL WORKS</button>
+          <button class="filter-btn" data-filter="bridal">BRIDAL</button>
+          <button class="filter-btn" data-filter="arabic">ARABIC</button>
+          <button class="filter-btn" data-filter="traditional">TRADITIONAL</button>
+          <button class="filter-btn" data-filter="modern">MODERN</button>
+          <button class="filter-btn" data-filter="festival">FESTIVAL</button>
+        </div>
+      </div>
+    </section>
+    <section class="gallery-grid-section">
+      <div class="gallery-grid" id="gallery-grid">
+        <div class="gallery-item reveal" data-cat="bridal">
+          <img src="images/mehndi_traditional.png" alt="Bridal Mehndi" />
+          <div class="gallery-hover"><span>Traditional Bridal</span></div>
+        </div>
+        <div class="gallery-item reveal" data-cat="arabic">
+          <img src="images/mehndi_arabic.png" alt="Arabic Mehndi" />
+          <div class="gallery-hover"><span>Arabic Artistry</span></div>
+        </div>
+        <div class="gallery-item reveal" data-cat="festival">
+          <img src="images/mehndi_geometric.png" alt="Festival Mehndi" />
+          <div class="gallery-hover"><span>Festival Collection</span></div>
+        </div>
+        <div class="gallery-item reveal" data-cat="modern">
+          <img src="images/mehndi_modern.png" alt="Modern Mehndi" />
+          <div class="gallery-hover"><span>Modern Minimal</span></div>
+        </div>
+        <div class="gallery-item reveal" data-cat="bridal">
+          <img src="images/mehndi_floral.png" alt="Bridal Experience" />
+          <div class="gallery-hover"><span>Bridal Experience</span></div>
+        </div>
+        <div class="gallery-item reveal" data-cat="traditional">
+          <img src="images/mehndi_hero.png" alt="Traditional Mehndi" />
+          <div class="gallery-hover"><span>Traditional Heritage</span></div>
+        </div>
+        <div class="gallery-item reveal" data-cat="arabic">
+          <img src="images/mehndi_traditional.png" alt="Arabic Florals" />
+          <div class="gallery-hover"><span>Arabic Florals</span></div>
+        </div>
+        <div class="gallery-item reveal" data-cat="modern">
+          <img src="images/mehndi_geometric.png" alt="Geometric Lines" />
+          <div class="gallery-hover"><span>Geometric Lines</span></div>
+        </div>
+        <div class="gallery-item reveal" data-cat="festival">
+          <img src="images/mehndi_modern.png" alt="Diwali Collection" />
+          <div class="gallery-hover"><span>Diwali Collection</span></div>
+        </div>
+        <div class="gallery-item reveal" data-cat="bridal">
+          <img src="images/mehndi_arabic.png" alt="Bridal Full Hand" />
+          <div class="gallery-hover"><span>Full Hand Bridal</span></div>
+        </div>
+        <div class="gallery-item reveal" data-cat="traditional">
+          <img src="images/mehndi_floral.png" alt="Traditional Classic" />
+          <div class="gallery-hover"><span>Classic Traditional</span></div>
+        </div>
+        <div class="gallery-item reveal" data-cat="arabic">
+          <img src="images/mehndi_hero.png" alt="Arabic Bold" />
+          <div class="gallery-hover"><span>Bold Arabic Art</span></div>
+        </div>
+      </div>
+    </section>
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">Snehal</div>
+          <p>Redefining the ancient art of henna for the modern luxury experience. Organic, artisanal, and tailored to you.</p>
+        </div>
+        <div class="footer-col"><h4>CURATION</h4><a href="#">Bridal</a><a href="#">Arabic</a><a href="#">Traditional</a><a href="#">Modern</a></div>
+        <div class="footer-col"><h4>RESOURCES</h4><a href="#">Press Kit</a><a href="#">Privacy</a><a href="#">Contact</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Snehal Mehndi Art. Crafted for Timeless Elegance.</p>
+        <p class="footer-locations">Ahmedabad</p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- ======================== SERVICES PAGE ======================== -->
+  <main id="page-services" class="page">
+    <section class="services-hero">
+      <div class="services-hero-inner">
+        <span class="hero-eyebrow reveal">EXQUISITE ARTISTRY</span>
+        <h1 class="services-title reveal">Signature Services</h1>
+        <p class="services-subtitle reveal"><em>Each stroke is a testament to tradition, crafted with organic henna and a modern editorial sensibility.</em></p>
+      </div>
+    </section>
+    <section class="services-grid-section">
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-card-img"><img src="images/mehndi_hero.png" alt="Bridal Experience" /></div>
+          <div class="service-card-body">
+            <h3>Bridal Experience</h3>
+            <p>The ultimate journey in henna artistry. Full intricate patterns for hands and feet, customised to tell your love story.</p>
+            <div class="service-divider"></div>
+            <span class="price-label">Starting From (Per Person)</span>
+            <span class="price-val">₹6,000</span>
+          </div>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-card-img"><img src="images/mehndi_traditional.png" alt="Engagement Mehndi" /></div>
+          <div class="service-card-body">
+            <h3>Engagement Mehndi</h3>
+            <p>Elegant medium-length designs that celebrate the beginning of your journey, focusing on balance and harmony.</p>
+            <div class="service-divider"></div>
+            <span class="price-label">Starting From (Per Person)</span>
+            <span class="price-val">₹4,000</span>
+          </div>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-card-img"><img src="images/mehndi_arabic.png" alt="Arabic Artistry" /></div>
+          <div class="service-card-body">
+            <h3>Arabic Artistry</h3>
+            <p>Bold, floral compositions with significant negative space. These flowing patterns create a striking, modern statement.</p>
+            <div class="service-divider"></div>
+            <span class="price-label">Starting From (Two Hands, Per Person)</span>
+            <span class="price-val">₹600</span>
+          </div>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-card-img"><img src="images/mehndi_modern.png" alt="Modern Minimal" /></div>
+          <div class="service-card-body">
+            <h3>Modern Minimal</h3>
+            <p>Geometric lines, dainty dots, and subtle accents for the modern editorial aesthetic and understated elegance.</p>
+            <div class="service-divider"></div>
+            <span class="price-label">Starting From (Two Hands, Per Person)</span>
+            <span class="price-val">₹400</span>
+          </div>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-card-img"><img src="images/mehndi_blessing.png" alt="Blessing Ceremony" /></div>
+          <div class="service-card-body">
+            <h3>Blessing Ceremony</h3>
+            <p>Pregnancy-safe, 100% organic henna celebrating new beginnings. Gentle patterns with profound meaning.</p>
+            <div class="service-divider"></div>
+            <span class="price-label">Starting From (Two Hands, Per Person)</span>
+            <span class="price-val">₹800</span>
+          </div>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-card-img"><img src="images/mehndi_floral.png" alt="Festival Collection" /></div>
+          <div class="service-card-body">
+            <h3>Festival Collection</h3>
+            <p>Curated seasonal designs for Eid, Diwali, and other celebrations. Quick, vibrant, and joyful expressions.</p>
+            <div class="service-divider"></div>
+            <span class="price-label">Starting From (Two Hands, Per Person)</span>
+            <span class="price-val">₹600</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="services-cta reveal">
+      <div class="services-cta-inner">
+        <h2>Ready for your transformation?</h2>
+        <div class="cta-buttons">
+          <button class="btn-primary" onclick="showPage('booking')">SCHEDULE APPOINTMENT</button>
+          <button class="btn-outline" onclick="showPage('portfolio')">VIEW PORTFOLIO</button>
+        </div>
+      </div>
+    </section>
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">Snehal<br />Mehndi</div>
+          <p>Elevating the ancient art of henna into a modern luxury experience.</p>
+        </div>
+        <div class="footer-col"><h4>Collections</h4><a href="#">Bridal</a><a href="#">Arabic</a><a href="#">Festival</a></div>
+        <div class="footer-col"><h4>About</h4><a href="#">Philosophy</a><a href="#">Artistry</a><a href="#">Press</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Snehal Mehndi Art. Crafted for Timeless Elegance.</p>
+        <p class="footer-locations">Ahmedabad</p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- ======================== BOOKING PAGE ======================== -->
+  <main id="page-booking" class="page">
+    <section class="booking-section">
+      <div class="booking-inner">
+        <div class="booking-form-side">
+          <span class="hero-eyebrow reveal">COMMISSION YOUR ART</span>
+          <h1 class="booking-title reveal">Commission Your<br />Personal Masterpiece</h1>
+          <form class="booking-form" onsubmit="handleBooking(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" name="name" placeholder=" " required />
+                <label>Full Name</label>
+              </div>
+              <div class="form-group">
+                <input type="tel" name="phone" placeholder=" " required />
+                <label>Phone Number</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder=" " required />
+              <label>Email Address</label>
+            </div>
+            <div class="form-row">
+              <div class="form-group has-date">
+                <input type="date" name="event_date" id="event-date" onchange="updateSummary()" placeholder=" " required />
+                <label>Event Date</label>
+              </div>
+              <div class="form-group has-select">
+                <select name="event_type" onchange="updateSummary()" required>
+                  <option>Wedding / Bridal</option>
+                  <option>Engagement</option>
+                  <option>Festival</option>
+                  <option>Blessing Ceremony</option>
+                  <option>Other</option>
+                </select>
+                <label>Event Type</label>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <input type="number" name="guest_count" placeholder=" " min="1" required />
+                <label>Guest Count</label>
+              </div>
+              <div class="form-group">
+                <input type="text" name="location" placeholder=" " required />
+                <label>Event Location</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label style="position: static; pointer-events: auto; font-size: .78rem; font-weight: 600; color: var(--text-light); margin-bottom: 8px;">Design Aesthetic</label>
+              <div class="aesthetic-cards">
+                <div class="aesthetic-card" data-val="Traditional" onclick="selectAesthetic(this)">Traditional</div>
+                <div class="aesthetic-card" data-val="Minimalist" onclick="selectAesthetic(this)">Minimalist</div>
+                <div class="aesthetic-card active" data-val="Indo-Arabic" onclick="selectAesthetic(this)">Indo-Arabic</div>
+                <div class="aesthetic-card" data-val="Bespoke" onclick="selectAesthetic(this)">Bespoke</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <textarea name="vision_notes" rows="4" placeholder=" " required></textarea>
+              <label>Vision Notes</label>
+            </div>
+            <button type="submit" id="submit-btn" class="btn-primary btn-full">CONFIRM BOOKING</button>
+          </form>
+        </div>
+        <div class="booking-summary-side">
+          <div class="booking-summary-card">
+            <h3>Booking Summary</h3>
+            <div class="summary-row">
+              <span>Proposed Date</span>
+              <span id="sum-date">Not Selected</span>
+            </div>
+            <div class="summary-row">
+              <span>Selected Artistry</span>
+              <span id="sum-style">Indo-Arabic</span>
+            </div>
+            <div class="summary-row">
+              <span>Location</span>
+              <span>TBD</span>
+            </div>
+            <div class="summary-divider"></div>
+            <div class="summary-row summary-total">
+              <span>Artist Retainer</span>
+              <span class="retainer-price">₹1,500</span>
+            </div>
+            <p class="summary-note">Retainer is applied toward the final service total. Full pricing confirmed upon consultation.</p>
+          </div>
+          <div class="booking-side-img">
+            <img src="images/mehndi_geometric.png" alt="Mehndi art" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">Snehal<br />Mehndi</div>
+          <p>Transcending the boundaries of traditional henna through editorial vision.</p>
+        </div>
+        <div class="footer-col"><h4>Artistry</h4><a href="#">The Collection</a><a href="#">Bridal Experience</a></div>
+        <div class="footer-col"><h4>House</h4><a href="#">Sustainability</a><a href="#">Privacy</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Snehal Mehndi Art. Crafted for Timeless Elegance.</p>
+        <p class="footer-locations">Ahmedabad</p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- ======================== CONFIRMATION PAGE ======================== -->
+  <main id="page-confirmation" class="page">
+    <section class="confirmation-section">
+      <div class="confirm-bg-img">
+        <img src="images/mehndi_hero.png" alt="Mehndi background" />
+      </div>
+      <div class="confirmation-inner">
+        <div class="confirm-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <h1 class="confirm-title">Inquiry Sent with Grace</h1>
+        <p class="confirm-desc">Your request has been received. Snehal will personally review your vision and reach out within 48 hours to discuss your bespoke commission.</p>
+        <div class="confirm-photos">
+          <img src="images/mehndi_social1.png" alt="mehndi" />
+          <img src="images/mehndi_arabic.png" alt="mehndi" />
+          <img src="images/mehndi_testimonial.png" alt="mehndi" />
+        </div>
+        <button class="btn-outline" onclick="showPage('portfolio')">Return to Gallery</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
+

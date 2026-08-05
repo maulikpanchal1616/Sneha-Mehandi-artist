@@ -1,0 +1,8 @@
+# Temporary / helper files
+activate-email.html
+test.html
+find_files.js
+
+# OS files
+.DS_Store
+Thumbs.db
