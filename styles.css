@@ -236,7 +236,7 @@ button{cursor:pointer;font-family:var(--sans);border:none;outline:none}
 }
 
 /* ===== COLLECTION ===== */
-.collection-section{padding:var(--section-gap-desktop) var(--margin-safe);background:var(--white);max-width:100%}
+.collection-section{padding:var(--section-gap-desktop) var(--margin-safe);background:var(--white);max-width:100%;scroll-margin-top:80px}
 .collection-section .section-label,.collection-section .section-title{text-align:center}
 .title-divider {width:60px;height:1.5px;background:var(--gold);margin:0 auto 36px}
 .cards-grid{max-width:1200px;margin:48px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;padding-bottom:60px}
@@ -258,7 +258,7 @@ button{cursor:pointer;font-family:var(--sans);border:none;outline:none}
 .art-card-link:hover{color:var(--secondary);transform:translateX(4px)}
 
 /* ===== TESTIMONIAL ===== */
-.testimonial-section{padding:120px var(--margin-safe);background:var(--background)}
+.testimonial-section{padding:120px var(--margin-safe);background:var(--background);scroll-margin-top:80px}
 .testimonial-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center}
 .testimonial-left{position:relative;padding:0 20px 0 0}
 
@@ -377,7 +377,9 @@ button{cursor:pointer;font-family:var(--sans);border:none;outline:none}
   z-index:1;
 }
 .testimonial-img-wrap.active{
-  position:relative;
+  position:absolute;
+  top:0;
+  left:0;
   opacity:1;
   visibility:visible;
   z-index:2;

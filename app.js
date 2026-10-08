@@ -17,17 +17,29 @@ function updateActiveNav(name) {
 }
 
 // ===== SMOOTH SCROLL SECTIONS =====
-function scrollToSection(selector) {
+function scrollToSection(selector, event) {
+  if (event && event.preventDefault) event.preventDefault();
   const homePage = document.getElementById('page-home');
+  
+  const performScroll = () => {
+    const target = document.querySelector(selector);
+    if (target) {
+      const header = document.getElementById('site-header');
+      const headerHeight = header ? header.offsetHeight : 72;
+      const targetTop = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+      window.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
+      
+      // Ensure all elements in target section are visible immediately
+      target.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+      if (target.classList.contains('reveal')) target.classList.add('visible');
+    }
+  };
+
   if (!homePage.classList.contains('active')) {
     showPage('home');
-    setTimeout(() => {
-      const target = document.querySelector(selector);
-      if (target) target.scrollIntoView({ behavior: 'smooth' });
-    }, 450);
+    setTimeout(performScroll, 350);
   } else {
-    const target = document.querySelector(selector);
-    if (target) target.scrollIntoView({ behavior: 'smooth' });
+    performScroll();
   }
 }
 
@@ -37,8 +49,8 @@ window.addEventListener('scroll', () => {
   if (!homePage || !homePage.classList.contains('active')) return;
   
   const sections = [
-    { id: 'nav-philosophy', selector: '.collection-section' },
-    { id: 'nav-artistry', selector: '.testimonial-section' },
+    { id: 'nav-philosophy', selector: '#section-philosophy' },
+    { id: 'nav-artistry', selector: '#section-artistry' },
     { id: 'nav-contact', selector: '#footer-home' }
   ];
   
@@ -89,22 +101,30 @@ window.addEventListener('scroll', () => {
 
 // ===== REVEAL ON SCROLL =====
 function triggerReveal() {
-  setTimeout(() => {
-    const els = document.querySelectorAll('.page.active .reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((e, i) => {
-        if (e.isIntersecting) {
-          setTimeout(() => e.target.classList.add('visible'), i * 80);
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    els.forEach(el => {
-      el.classList.remove('visible');
-      observer.observe(el);
+  const els = document.querySelectorAll('.page.active .reveal');
+  if (!els.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
     });
-  }, 50);
+  }, { rootMargin: '60px 0px 0px 0px', threshold: 0.01 });
+
+  els.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top <= window.innerHeight + 80) {
+      el.classList.add('visible');
+    } else {
+      observer.observe(el);
+    }
+  });
 }
+
+window.addEventListener('DOMContentLoaded', triggerReveal);
+window.addEventListener('load', triggerReveal);
 
 // ===== GALLERY FILTER =====
 document.querySelectorAll('.filter-btn').forEach(btn => {

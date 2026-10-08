@@ -28,9 +28,9 @@
        <nav class="main-nav">
          <a href="#" class="nav-link" onclick="showPage('portfolio')" id="nav-portfolio">Portfolio</a>
          <a href="#" class="nav-link" onclick="showPage('services')" id="nav-services">Services</a>
-         <a href="#" class="nav-link" onclick="scrollToSection('.collection-section')" id="nav-philosophy">Philosophy</a>
-         <a href="#" class="nav-link" onclick="scrollToSection('.testimonial-section')" id="nav-artistry">Artistry</a>
-         <a href="#" class="nav-link" onclick="scrollToSection('#footer-home')" id="nav-contact">Contact</a>
+         <a href="#section-philosophy" class="nav-link" onclick="scrollToSection('#section-philosophy', event)" id="nav-philosophy">Philosophy</a>
+         <a href="#section-artistry" class="nav-link" onclick="scrollToSection('#section-artistry', event)" id="nav-artistry">Artistry</a>
+         <a href="#footer-home" class="nav-link" onclick="scrollToSection('#footer-home', event)" id="nav-contact">Contact</a>
        </nav>
        <button class="btn-book-now" onclick="showPage('booking')">BOOK NOW</button>
        <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -40,9 +40,9 @@
      <div class="mobile-nav" id="mobile-nav">
        <a href="#" onclick="showPage('portfolio');closeMobileNav()">Portfolio</a>
        <a href="#" onclick="showPage('services');closeMobileNav()">Services</a>
-       <a href="#" onclick="scrollToSection('.collection-section');closeMobileNav()">Philosophy</a>
-       <a href="#" onclick="scrollToSection('.testimonial-section');closeMobileNav()">Artistry</a>
-       <a href="#" onclick="scrollToSection('#footer-home');closeMobileNav()">Contact</a>
+       <a href="#section-philosophy" onclick="scrollToSection('#section-philosophy', event);closeMobileNav()">Philosophy</a>
+       <a href="#section-artistry" onclick="scrollToSection('#section-artistry', event);closeMobileNav()">Artistry</a>
+       <a href="#footer-home" onclick="scrollToSection('#footer-home', event);closeMobileNav()">Contact</a>
        <a href="#" class="mobile-book" onclick="showPage('booking');closeMobileNav()">BOOK NOW</a>
      </div>
    </header>
@@ -131,8 +131,8 @@
     </section>
 
     <!-- The Collection -->
-    <section class="collection-section">
-      <div class="section-label gold-label reveal">THE COLLECTION</div>
+    <section class="collection-section" id="section-philosophy">
+      <div class="section-label gold-label reveal">OUR PHILOSOPHY & COLLECTION</div>
       <h2 class="section-title reveal"><em>Featured Art Styles</em></h2>
       <div class="title-divider reveal"></div>
       <div class="cards-grid">
@@ -171,10 +171,10 @@
 
     <!-- Testimonial -->
     <!-- Testimonial -->
-    <section class="testimonial-section">
+    <section class="testimonial-section" id="section-artistry">
       <div class="testimonial-inner">
         <div class="testimonial-left reveal">
-          <div class="section-label gold-label">THE EXPERIENCE</div>
+          <div class="section-label gold-label">THE ARTISTRY & EXPERIENCE</div>
           <h2 class="section-title">Hear from our<br />Exquisite Brides</h2>
           
           <div class="testimonial-text-slider">
