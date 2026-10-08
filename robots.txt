@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap URL (Update your domain if using a custom domain)
+Sitemap: https://maulikpanchal1616.github.io/Sneha-Mehandi-artist/sitemap.xml
